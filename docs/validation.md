@@ -50,7 +50,7 @@ One laboratory run, not field telemetry or a guaranteed production score. React 
 ## Limits and live checks still required
 
 - `QLOO_API_KEY` is missing in the deployed environment. No real Qloo research/report has been verified. Configure the event-issued key, redeploy, run the coffee/Madrid brief, inspect request affinities and capture screenshots 03–08. The public product cannot meet the event's functional-research requirement until this succeeds.
-- `OPENROUTER_API_KEY` is missing. The public catalog confirms free Gemma/default and router pricing, but authenticated structured inference and free capacity are not yet verified. This optional gap does not prevent deterministic Qloo operation.
+- `OPENROUTER_API_KEY` is now configured locally and in Vercel Production, and the app was redeployed. Production status confirms configuration. The first live brief request fell back; a zero-price diagnostic received HTTP 429 from the free provider. Successful structured inference remains unverified while free capacity is unavailable. This optional gap does not prevent deterministic Qloo operation.
 - The full dependency audit reports five high-severity transitive findings in the development lint chain through `braces`/`micromatch`/`fast-glob`. Production dependencies audit clean. No compatible patched `braces` release was available at verification; do not claim the full development tree is vulnerability-free.
 - Vercel Git integration could not connect; CLI deployment succeeds. This affects automatic redeployment, not public availability. Pushes currently require a separate CLI deployment.
 

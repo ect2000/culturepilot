@@ -32,4 +32,4 @@ The remaining budgets have safe defaults documented in `.env.example`. Credentia
 5. Run `npm run screenshots` with `SCREENSHOT_BASE_URL=https://culturepilot.vercel.app`. The script captures real data only. Inspect images 03–08 before including them in Devpost.
 6. Update this validation record and submission status to reflect actual live results. Keep the event key and public app working through judging.
 
-Current production has neither provider key. Screenshots 01–02 and the real connection-needed state have been captured; report screenshots remain blocked. Do not submit the connection-needed state as a functional demo.
+Current production has the optional OpenRouter key configured, with a new successful deployment. A live free-provider check returned HTTP 429; the brief endpoint correctly uses deterministic form fallback. The Qloo key is still missing. Screenshots 01–02 and the real connection-needed state have been captured; report screenshots remain blocked. Do not submit the connection-needed state as a functional demo.

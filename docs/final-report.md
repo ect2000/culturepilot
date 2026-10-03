@@ -12,7 +12,7 @@ The deterministic graph distinguishes user, Qloo and derived nodes/edges. The op
 
 ## Optional OpenRouter
 
-Default **`google/gemma-4-31b-it:free`**, verified on the public catalog October 3, 2026 at **$0 input and $0 output**. Only alternate: `openrouter/free`. The provider checks current catalog pricing and applies zero-price request caps. Unknown, paid, incorrectly named or repriced models are refused; no user input can select a paid model. Authenticated inference is currently unverified because its optional key is missing.
+Default **`google/gemma-4-31b-it:free`**, verified on the public catalog October 3, 2026 at **$0 input and $0 output**. Only alternate: `openrouter/free`. The provider checks current catalog pricing and applies zero-price request caps. Unknown, paid, incorrectly named or repriced models are refused; no user input can select a paid model. The optional key is now configured locally and in redeployed production. A live free-provider check returned HTTP 429, and the brief endpoint correctly fell back; successful structured inference remains unverified.
 
 OpenRouter can extract a candidate brief for user review, suggest supported dimensions, choose from allowed controller-generated research actions, select grounded strategy wording and concise opportunity explanations. Qloo supplies entities/affinities; deterministic code executes tools, constructs graphs, scores/ranks opportunities and assigns provenance. The rest of the engine depends on a provider-independent interface rather than OpenRouter.
 
@@ -30,6 +30,6 @@ README, architecture, scoring rationale, model/cost/grounding contracts, Devpost
 
 **Required:** set the event-issued `QLOO_API_KEY` in Vercel Production, redeploy, validate a real coffee/Madrid run and capture screenshots 03–08. Until then the public studio is deployed but does not satisfy the event's live research requirement.
 
-**Optional layer:** set `OPENROUTER_API_KEY` to verify real structured inference and model capacity. Without it, deterministic mode works once Qloo is configured. No paid account action or model purchase is needed.
+**Optional layer:** the key is configured; successful structured inference awaits available free-provider capacity following an HTTP 429 response. Deterministic mode works once Qloo is configured. No paid account action or model purchase is needed.
 
 Vercel Git integration is unavailable; successful CLI deployment is the current path. This does not block live availability. The optional video is scripted, not recorded; recording should follow real research. The deadline is October 31, 2026 at 04:45 Europe/Madrid. Keep the functional public app and valid access through judging; do not mark submission ready before live verification.
