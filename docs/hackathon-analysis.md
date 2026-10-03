@@ -1,0 +1,20 @@
+# Qloo Agentic Hackathon — build decisions
+
+Reviewed October 3, 2026. Sources: [official rules](https://qloo.devpost.com/rules), [overview](https://qloo.devpost.com/), [resources](https://qloo.devpost.com/resources), [updates](https://qloo.devpost.com/updates), [developer guide](https://docs.qloo.com/reference/qloo-llm-hackathon-developer-guide), [official kit](https://github.com/qloo/qloo-hackathon-kit).
+
+- Deadline: October 30, 2026, 23:45 EDT = October 31, 03:45 UTC = October 31, **04:45 Europe/Madrid**. The original-work build begins October 3, within the submission period.
+- Must integrate Qloo in a working agentic application. An LLM and a particular agent framework are not mandatory. CulturePilot makes adaptive tool decisions, evaluates coverage, expands the graph, and stops within explicit budgets.
+- Four equally weighted criteria: technological implementation, design, potential impact, quality of idea. Prioritize useful strategy, non-trivial multi-step Qloo use, visible provenance, and coherent UX.
+- Submit a fully published functional demo, public source repository including all source/setup/assets, detectable open-source license, and English project description. MIT meets the open-source requirement. Keep the app freely accessible through judging (November 16, ET).
+- A demo video is **not mandatory** for this event. A 2–3 minute script is prepared as an optional promotional asset. Do not confuse this event with the 2025 Qloo LLM Hackathon.
+- Solo entry is allowed, subject to the official age, residence and conflict-of-interest eligibility rules. Registration and final Devpost submission remain entrant actions.
+- Obtain an individually attributable event key through the [resource page's form](https://docs.google.com/forms/d/1G_udB8rJTlSwwCx9LF1vaftYI4Qf459ZXIKqLPElWc8/viewform). The guide links an additional access form; prefer current organizer instructions. Issuance typically takes a few business days. Keys are hackathon-only and subject to Qloo terms.
+- Event base URL: `https://hackathon.api.qloo.com`. Use `X-Api-Key` on the server. Staging/production hosts do not accept event keys. No fallback host or credential.
+- Documented GET tools used: `/v2/tags` with `filter.query`, `/search` with `query`, `/v2/insights` with `filter.type` and valid resolved interest IDs. Do not use legacy `/recs` or `/recommendations`.
+- Supported research dimensions selected for MVP: brand, place, artist, book, movie, podcast, TV show. Do not invent lifestyle, music or dining entity types; music maps to artist, dining to place. The guide and API reference differ on some unused type spellings; avoid these types.
+- No numeric public event quota, expiry or rate limit was published in the inspected guide/kit. The guide says limits support typical projects. Enforce local call budgets and timeout, stop on HTTP 429, and escalate through Discord `#api-help`. Confirm actual quota/expiry when the key is issued.
+- Available resources: Qloo data/access form, official public kit and CLI/MCP harness, docs and Discord support. No sponsor-paid inference entitlement was verified. No inference is needed by this product.
+- Qloo results concern aggregate cultural affinities, not individual behavior, causal effects or market demand. Separate API evidence from CulturePilot interpretation. Do not send personal identifiers, infer sensitive traits, bulk scrape, or redistribute Qloo as an unrelated database. MIT covers original code; Qloo data remains subject to its terms.
+- Updates page had no organizer announcements at review. Recheck before submission; official rules take precedence over the build brief.
+
+API schema sources: [Search](https://docs.qloo.com/reference/get-search), [parameter reference](https://docs.qloo.com/reference/parameters), [entity parameter guide](https://docs.qloo.com/reference/available-parameters-by-entity-type), [Insights](https://docs.qloo.com/reference/insights-api-deep-dive), and `@qloo/qloo-harness@0.1.26` published source for tag request shape. Documentation links may be stale; the developer guide and published harness establish actual endpoint paths.
