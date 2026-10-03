@@ -4,7 +4,9 @@
 
 CulturePilot turns a business idea and audience into a traceable cultural strategy using Qloo's Taste Graph. It investigates, evaluates coverage, follows new connections, ranks opportunities and explains every recommendation—without a paid model API or a database.
 
-**Live app:** deployment verification pending. **Source:** publication verification pending. Live research requires an event-issued Qloo key configured by the deployment owner. Production never substitutes a fictional report.
+**[Live app](https://culturepilot.vercel.app)** · **[Public source](https://github.com/ect2000/culturepilot)** · **[Verification report](docs/validation.md)**
+
+Deployment and public MIT source are verified. Live research still requires an event-issued Qloo key configured by the deployment owner; optional language assistance also needs its server key. Production never substitutes a fictional report. The project is **not ready for final submission until live Qloo research succeeds**.
 
 ## What is CulturePilot?
 
@@ -95,6 +97,10 @@ The evidence drawer presents supporting source → result relationships, affinit
 
 ## Screenshots
 
+![CulturePilot production landing](docs/screenshots/01-landing.png)
+
+[Production brief builder](docs/screenshots/02-brief-builder.png). These images show the real deployed studio; result captures remain pending live Qloo verification.
+
 Submission images are captured with Playwright at 1440×1000 using `npm run screenshots`. The script captures the landing page and brief, then captures live research and results **only when Qloo is configured and actually succeeds**. It never loads synthetic fixtures. Read [screenshot status](docs/screenshots/STATUS.md) for the available files and remaining live captures.
 
 ## Demo
@@ -160,6 +166,8 @@ vercel --prod --yes
 ```
 
 Enter the key at the interactive prompt or in Vercel's secret environment UI; do not put it in command arguments. Ensure deployment protection is disabled for the public judging app. Keep valid access through the end of judging.
+
+The current production URL is **https://culturepilot.vercel.app**, verified as HTTP 200 without authentication. Add `OPENROUTER_API_KEY` only if enabling the optional language layer; the free model defaults need no custom environment values. `APP_URL` is already configured for production attribution. Redeploy after adding keys. Deployment currently uses the authenticated Vercel CLI; connecting the GitHub repository to Vercel's Git integration was unavailable, so Git pushes alone do not deploy. [Deployment record](docs/deployment.md).
 
 Capture production screenshots after live verification:
 

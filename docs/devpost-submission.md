@@ -1,6 +1,6 @@
 # Devpost submission draft
 
-**Status:** source implementation prepared; complete the final live verification and public links before submitting. Do not describe unverified live behavior as tested. Replace the link fields only with verified URLs.
+**Status:** public MIT source and production deployment verified. Local validation and GitHub Actions pass. Complete authenticated live Qloo research before submission; optional authenticated OpenRouter inference is also unverified. Do not describe synthetic tests as live API validation.
 
 ## Project name
 
@@ -62,11 +62,11 @@ Next.js, React, TypeScript, Tailwind CSS, shadcn/ui conventions, Radix UI, Motio
 
 ## Public URL
 
-Pending verified deployment.
+[CulturePilot public application](https://culturepilot.vercel.app)
 
 ## Public repository
 
-Pending verification of public access and pushed source.
+[Public MIT repository](https://github.com/ect2000/culturepilot)
 
 ## Judge testing instructions
 
